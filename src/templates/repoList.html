@@ -1,7 +1,7 @@
 <ul class="repos unstyled">
     <% _.each(collection, function (item) { %>
     <li>
-        <%- item.slug %>
+        <%- item.slug %> [<%-item.status %>]
     </li>
     <% }); %>
 </ul>

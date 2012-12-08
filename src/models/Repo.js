@@ -1,9 +1,10 @@
 define(
     [
         'jquery',
-        'backbone'
+        'backbone',
+        'underscore'
     ],
-    function ($, Backbone) {
+    function ($, Backbone, _) {
         "use strict";
 
         return Backbone.Model.extend({
@@ -15,7 +16,21 @@ define(
             },
 
             presenter: function () {
-                return this.toJSON();
+                return _.extend(this.toJSON(), {
+                    status: this.getStatus()
+                });
+            },
+
+            getStatus: function () {
+                var lastBuildStatus = this.get('last_build_status');
+
+                if (0 === lastBuildStatus) {
+                    return 'pass';
+                } else if (1 === lastBuildStatus) {
+                    return 'fail';
+                }
+
+                return 'unknown';
             }
         });
     }
