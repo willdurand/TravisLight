@@ -1,7 +1,9 @@
-<ul class="repos unstyled">
-    <% _.each(collection, function (item) { %>
-    <li>
-        <%- item.slug %> [<%-item.status %>]
-    </li>
-    <% }); %>
-</ul>
+<% _.each(collection, function (item) { %>
+<li class="repo <%- item.status %>">
+    <%- item.slug %>
+    <span class="pull-right">
+        <a href="<%- item.travisUrl %>" class="icon-travis" target="_blank"></a>
+        <a href="<%- item.githubUrl %>" class="icon-github" target="_blank"></a>
+    </span>
+</li>
+<% }); %>

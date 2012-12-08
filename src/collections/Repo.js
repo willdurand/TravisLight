@@ -12,7 +12,7 @@ define(
             model: RepoModel,
 
             initialize: function (models, options) {
-                this.url = $('body').data('api-url') + '/repos?owner_name=willdurand';
+                this.url = $('body').data('api-url') + '/repos?member=willdurand';
             },
 
             presenter: function () {
@@ -22,8 +22,7 @@ define(
             },
 
             comparator: function (repoModel) {
-                // sort by slug ASC
-                return repoModel.get('slug');
+                return repoModel.getStatus();
             }
         });
     }

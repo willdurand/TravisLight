@@ -17,7 +17,9 @@ define(
 
             presenter: function () {
                 return _.extend(this.toJSON(), {
-                    status: this.getStatus()
+                    status: this.getStatus(),
+                    travisUrl: this.getTravisUrl(),
+                    githubUrl: this.getGithubUrl()
                 });
             },
 
@@ -25,12 +27,20 @@ define(
                 var lastBuildStatus = this.get('last_build_status');
 
                 if (0 === lastBuildStatus) {
-                    return 'pass';
+                    return 'passing';
                 } else if (1 === lastBuildStatus) {
-                    return 'fail';
+                    return 'failing';
                 }
 
                 return 'unknown';
+            },
+
+            getTravisUrl: function () {
+                return 'https://travis-ci.org/' + this.get('slug');
+            },
+
+            getGithubUrl: function () {
+                return 'https://github.com/' + this.get('slug');
             }
         });
     }

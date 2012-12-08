@@ -8,6 +8,8 @@ define(
         "use strict";
 
         return new (Backbone.View.extend({
+            tagName: 'div',
+            className: 'container-fluid',
             template: _.template(template),
 
             render: function () {

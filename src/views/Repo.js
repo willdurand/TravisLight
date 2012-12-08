@@ -9,6 +9,8 @@ define(
         "use strict";
 
         return Backbone.View.extend({
+            tagName: 'ul',
+            className: 'repos unstyled',
             template: _.template(template),
 
             initialize: function (options) {

@@ -1,0 +1,73 @@
+body,
+.container-fluid {
+    padding: 0;
+}
+
+.repos {
+    margin-bottom: 0;
+}
+
+.repo {
+    padding: 10px;
+}
+
+.repo span {
+    margin-top: -5px;
+}
+
+.failing {
+    background: #ff3019; /* Old browsers */
+    background: -moz-linear-gradient(top, #ff3019 0%, #cf0404 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff3019), color-stop(100%,#cf0404)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ff3019 0%,#cf0404 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ff3019 0%,#cf0404 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ff3019 0%,#cf0404 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #ff3019 0%,#cf0404 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=0 ); /* IE6-9 */
+}
+
+.passing {
+    background: #a4b357; /* Old browsers */
+    background: -moz-linear-gradient(top, #a4b357 0%, #75890c 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a4b357), color-stop(100%,#75890c)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #a4b357 0%,#75890c 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #a4b357 0%,#75890c 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #a4b357 0%,#75890c 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #a4b357 0%,#75890c 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a4b357', endColorstr='#75890c',GradientType=0 ); /* IE6-9 */
+}
+
+.icon-github,
+.icon-travis {
+    display: inline-block;
+}
+
+.icon-github {
+    width: 24px;
+    height: 24px;
+    background: transparent url(../images/github.png) 0 0 no-repeat;
+}
+
+.icon-travis {
+    width: 24px;
+    height: 24px;
+    padding-top: 2px;
+    background: transparent url(../images/travis.png) 0 2px no-repeat;
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+
+    .icon-github {
+        background-size: 24px 24px;
+        background-image: url(../images/github@2x.png);
+    }
+
+    .icon-travis {
+        background-size: 19px 19px;
+        background-image: url(../images/travis@2x.png);
+    }
+}
