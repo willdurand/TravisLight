@@ -98,7 +98,7 @@ a:hover, a:focus {
 
 .loading {
     min-height: 300px;
-    background: url(/images/loader.gif) no-repeat center center;
+    background: url(../images/loader.gif) no-repeat center center;
 }
 
 @media
