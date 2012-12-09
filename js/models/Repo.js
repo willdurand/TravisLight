@@ -2,9 +2,10 @@ define(
     [
         'jquery',
         'backbone',
-        'underscore'
+        'underscore',
+        'moment'
     ],
-    function ($, Backbone, _) {
+    function ($, Backbone, _, moment) {
         "use strict";
 
         return Backbone.Model.extend({
@@ -19,7 +20,9 @@ define(
                 return _.extend(this.toJSON(), {
                     status: this.getStatus(),
                     travisUrl: this.getTravisUrl(),
-                    githubUrl: this.getGithubUrl()
+                    githubUrl: this.getGithubUrl(),
+                    lastBuildFinishedAt: this.getLastBuildFinishedAt(),
+                    humanizedLastBuildFinishedAt: this.getHumanizedBuildFinishedAt()
                 });
             },
 
@@ -36,11 +39,23 @@ define(
             },
 
             getTravisUrl: function () {
-                return 'https://travis-ci.org/' + this.get('slug');
+                return 'https://travis-ci.org/' + this.get('slug') + '/builds/' + this.get('last_build_id');
             },
 
             getGithubUrl: function () {
                 return 'https://github.com/' + this.get('slug');
+            },
+
+            getLastBuildFinishedAt: function () {
+                return this.get('last_build_finished_at');
+            },
+
+            getHumanizedBuildFinishedAt: function () {
+                if (undefined !== this.getLastBuildFinishedAt()) {
+                    return moment(this.getLastBuildFinishedAt()).fromNow();
+                }
+
+                return '';
             }
         });
     }

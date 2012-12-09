@@ -12,7 +12,8 @@ define(
             model: RepoModel,
 
             initialize: function (models, options) {
-                this.url = $('body').data('api-url') + '/repos?member=willdurand';
+                this.username = options.username;
+                this.url      = $('body').data('api-url') + '/repos?member=' + this.username;
             },
 
             presenter: function () {

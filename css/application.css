@@ -8,7 +8,15 @@ body,
 }
 
 .repo {
-    padding: 10px 10px 10px 12px;
+    padding: 10px 16px 10px 16px;
+}
+
+.infos {
+    width: 85%;
+}
+
+.repo time {
+    display: block;
 }
 
 .repo-name {
@@ -16,12 +24,12 @@ body,
     overflow-x: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 85%;
-    display: inline-block;
+    margin: 0;
 }
 
 .buttons {
-    margin-top: -4px;
+    float: right;
+    margin-top: -34px;
 }
 
 .failing {

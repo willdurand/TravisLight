@@ -6,6 +6,7 @@
         "lodash": "0.10.*",
         "requirejs": "2.1.*",
         "requirejs-text": "2.0.*",
-        "bootstrap.css": "2.1.*"
+        "bootstrap.css": "2.1.*",
+        "moment": "1.7.*"
     }
 }

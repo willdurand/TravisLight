@@ -1,9 +1,14 @@
 <% _.each(collection, function (item) { %>
 <li class="repo <%- item.status %>">
-    <span class="repo-name"><%- item.slug %></span>
-    <span class="pull-right buttons">
+    <div class="infos">
+        <p class="repo-name"><%- item.slug %></p>
+        <time datetime="<%- item.lastBuildFinishedAt %>">
+            <i class="icon-time"></i> <%- item.humanizedLastBuildFinishedAt %>
+        </time>
+    </div>
+    <div class="buttons">
         <a href="<%- item.travisUrl %>" class="icon-travis" target="_blank"></a>
         <a href="<%- item.githubUrl %>" class="icon-github" target="_blank"></a>
-    </span>
+    </div>
 </li>
 <% }); %>

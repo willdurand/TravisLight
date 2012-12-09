@@ -3,7 +3,8 @@ require({
         'backbone': '/components/backbone/backbone-min',
         'jquery': '/components/jquery/jquery',
         'underscore': '/components/lodash/lodash.min',
-        'text': '/components/requirejs-text/text'
+        'text': '/components/requirejs-text/text',
+        'moment': '/components/moment/moment'
     },
 
     shim: {
