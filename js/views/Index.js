@@ -2,9 +2,10 @@ define(
     [
         'text!templates/index.html',
         'backbone',
-        'underscore'
+        'underscore',
+        'jquery'
     ],
-    function (template, Backbone, _) {
+    function (template, Backbone, _, $) {
         "use strict";
 
         return Backbone.View.extend({
@@ -21,6 +22,7 @@ define(
             },
 
             render: function () {
+                $('body').removeClass('loading');
                 this.$el.html(this.template());
             },
 
