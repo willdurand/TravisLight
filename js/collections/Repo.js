@@ -23,7 +23,16 @@ define(
             },
 
             comparator: function (repoModel) {
-                return repoModel.getStatus();
+                switch (repoModel.getStatus()) {
+                    case 'passing':
+                        return 3;
+
+                    case 'failing':
+                        return 1;
+
+                    default:
+                        return 2;
+                }
             }
         });
     }
