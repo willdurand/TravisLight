@@ -1,8 +1,8 @@
 TravisLight
 ===========
 
-TravisLight is a build monitoring tool to quickly detect failing projects hosted
-on [GitHub](http://github.com) and tested using [Travis
+TravisLight is a build monitoring tool that quickly detects failing projects
+hosted on [GitHub](http://github.com) and tested using [Travis
 CI](https://travis-ci.org/).
 
 Installation
