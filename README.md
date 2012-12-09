@@ -17,7 +17,22 @@ Install dependencies using [Bower](http://twitter.github.com/bower/):
 
     bower install
 
-You're done!
+You're done! All you need is a webserver to run the application.
+
+You can use the PHP built-in webserver:
+
+    php -S localhost:8000
+
+Alternatively, you can use [Node.js](http://nodejs.org/). First, install
+[Connect](http://www.senchalabs.org/connect/):
+
+    npm install connect
+
+Now, start the webserver:
+
+    node server.js
+
+Browse the application at: http://locahost:8000/.
 
 
 Screenshots
