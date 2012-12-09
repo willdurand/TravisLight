@@ -11,14 +11,21 @@ define(
         return new (Backbone.Router.extend({
 
             routes: {
-                '': 'all'
+                '': 'index',
+                ':username': 'watch'
             },
 
-            all: function () {
+            index: function () {
+                this.watch('willdurand');
+            },
+
+            watch: function (username) {
                 var repoView,
                     repoCollection;
 
-                repoCollection = new RepoCollection();
+                repoCollection = new RepoCollection(null, {
+                    username: username
+                });
                 repoView = new RepoView({
                     repoCollection: repoCollection
                 });
@@ -26,9 +33,7 @@ define(
                 repoView.render();
                 $('.main').html(repoView.el);
 
-                repoCollection.fetch().done(function () {
-                    repoView.render();
-                });
+                repoView.autoFetch();
             }
         }))();
     }
