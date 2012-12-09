@@ -15,16 +15,16 @@ body,
     width: 85%;
 }
 
-.repo time {
-    display: block;
-}
-
-.repo-name {
-    font-weight: bold;
+.repo-name,
+.summary {
     overflow-x: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+.repo-name {
     margin: 0;
+    font-weight: bold;
 }
 
 .buttons {

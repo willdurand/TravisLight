@@ -2,9 +2,12 @@
 <li class="repo <%- item.status %>">
     <div class="infos">
         <p class="repo-name"><%- item.slug %></p>
-        <time datetime="<%- item.lastBuildFinishedAt %>">
-            <i class="icon-time"></i> <%- item.humanizedLastBuildFinishedAt %>
-        </time>
+        <div class="summary">
+            <time datetime="<%- item.lastBuildFinishedAt %>">
+                <i class="icon-time"></i> <%- item.humanizedLastBuildFinishedAt %>
+            </time>
+            | <%- item.description %>
+        </div>
     </div>
     <div class="buttons">
         <a href="<%- item.travisUrl %>" class="icon-travis" target="_blank"></a>
