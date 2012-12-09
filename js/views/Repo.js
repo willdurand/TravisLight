@@ -19,6 +19,8 @@ define(
             },
 
             render: function () {
+                $('body').addClass('loading');
+
                 this.$el.html(this.template({
                     collection: this.repoCollection.presenter()
                 }));
@@ -28,6 +30,7 @@ define(
                 var that = this;
 
                 this.repoCollection.fetch().done(function () {
+                    $('body').removeClass('loading');
                     that.render();
 
                     window.setTimeout(function () {

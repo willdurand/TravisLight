@@ -92,6 +92,15 @@ a:hover, a:focus {
     background: transparent url(../images/github.png) 0 0 no-repeat;
 }
 
+.index {
+    padding: 0 20px 0 20px;
+}
+
+.loading {
+    min-height: 300px;
+    background: url(/images/loader.gif) no-repeat center center;
+}
+
 @media
 only screen and (-webkit-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
@@ -102,8 +111,4 @@ only screen and (min-device-pixel-ratio: 1.5) {
         background-size: 24px 24px;
         background-image: url(../images/github@2x.png);
     }
-}
-
-.index {
-    padding: 0 20px 0 20px;
 }
