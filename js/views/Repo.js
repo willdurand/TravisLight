@@ -29,6 +29,12 @@ define(
             autoFetch: function () {
                 var that = this;
 
+                if (false === $(this.el).is(':visible')) {
+                    $('body').removeClass('loading');
+
+                    return;
+                }
+
                 this.repoCollection.fetch().done(function () {
                     $('body').removeClass('loading');
                     that.render();
