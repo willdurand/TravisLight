@@ -51,7 +51,7 @@ define(
             },
 
             getHumanizedBuildFinishedAt: function () {
-                if (undefined !== this.getLastBuildFinishedAt()) {
+                if (this.getLastBuildFinishedAt()) {
                     return moment(this.getLastBuildFinishedAt()).fromNow();
                 }
 
