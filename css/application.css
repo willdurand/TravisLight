@@ -12,7 +12,7 @@ body,
 }
 
 .infos {
-    width: 85%;
+    width: 90%;
 }
 
 .repo-name,
@@ -20,6 +20,7 @@ body,
     overflow-x: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    display: block;
 }
 
 .repo-name {
@@ -27,7 +28,17 @@ body,
     font-weight: bold;
 }
 
-.buttons {
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    color: #000;
+    text-decoration: underline;
+}
+
+.actions {
     float: right;
     margin-top: -34px;
 }
@@ -54,22 +65,11 @@ body,
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a4b357', endColorstr='#75890c',GradientType=0 ); /* IE6-9 */
 }
 
-.icon-github,
-.icon-travis {
-    display: inline-block;
-}
-
 .icon-github {
     width: 24px;
     height: 24px;
+    display: inline-block;
     background: transparent url(../images/github.png) 0 0 no-repeat;
-}
-
-.icon-travis {
-    width: 24px;
-    height: 24px;
-    padding-top: 2px;
-    background: transparent url(../images/travis.png) 0 2px no-repeat;
 }
 
 @media
@@ -81,10 +81,5 @@ only screen and (min-device-pixel-ratio: 1.5) {
     .icon-github {
         background-size: 24px 24px;
         background-image: url(../images/github@2x.png);
-    }
-
-    .icon-travis {
-        background-size: 19px 19px;
-        background-image: url(../images/travis@2x.png);
     }
 }
