@@ -1,7 +1,7 @@
 <% _.each(collection, function (item) { %>
 <li class="repo <%- item.status %>">
-    <%- item.slug %>
-    <span class="pull-right">
+    <span class="repo-name"><%- item.slug %></span>
+    <span class="pull-right buttons">
         <a href="<%- item.travisUrl %>" class="icon-travis" target="_blank"></a>
         <a href="<%- item.githubUrl %>" class="icon-github" target="_blank"></a>
     </span>

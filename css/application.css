@@ -8,11 +8,20 @@ body,
 }
 
 .repo {
-    padding: 10px;
+    padding: 10px 10px 10px 12px;
 }
 
-.repo span {
-    margin-top: -5px;
+.repo-name {
+    font-weight: bold;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 85%;
+    display: inline-block;
+}
+
+.buttons {
+    margin-top: -4px;
 }
 
 .failing {
