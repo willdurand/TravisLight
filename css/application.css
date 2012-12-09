@@ -3,6 +3,15 @@ body,
     padding: 0;
 }
 
+h1 {
+    text-shadow: 2px 2px 5px black;
+    margin-bottom: 9px;
+    font-size: 60px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 1;
+}
+
 .repos {
     margin-bottom: 0;
 }
@@ -93,4 +102,8 @@ only screen and (min-device-pixel-ratio: 1.5) {
         background-size: 24px 24px;
         background-image: url(../images/github@2x.png);
     }
+}
+
+.index {
+    padding: 0 20px 0 20px;
 }

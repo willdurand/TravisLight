@@ -3,9 +3,10 @@ define(
         'backbone',
         'jquery',
         'views/Repo',
-        'collections/Repo'
+        'collections/Repo',
+        'views/Index'
     ],
-    function (Backbone, $, RepoView, RepoCollection) {
+    function (Backbone, $, RepoView, RepoCollection, IndexView) {
         "use strict";
 
         return new (Backbone.Router.extend({
@@ -16,7 +17,12 @@ define(
             },
 
             index: function () {
-                this.watch('willdurand');
+                var indexView = new IndexView({
+                    router: this
+                });
+
+                indexView.render();
+                $('.main').html(indexView.el);
             },
 
             watch: function (username) {
