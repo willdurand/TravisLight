@@ -11,6 +11,16 @@ This application has been written using [Backbone.js](http://backbonejs.org/),
 [Lo Dash](http://lodash.com/).
 
 
+Screenshots
+-----------
+
+A picture is worth a thousand words, so here are a few screenshots:
+
+![](https://raw.github.com/willdurand/TravisLight/master/doc/index.png)
+
+![](https://raw.github.com/willdurand/TravisLight/master/doc/repos.png)
+
+
 Installation
 ------------
 
@@ -36,14 +46,15 @@ Alternatively, you can use the PHP built-in webserver:
 Browse the application at: http://locahost:8000/.
 
 
-Screenshots
------------
+Command Line
+------------
 
-A picture is worth a thousand words, so here are a few screenshots:
+This application uses [Grunt.js](http://gruntjs.com/) to provide build tasks.
+Package the application using the following command:
 
-![](https://raw.github.com/willdurand/TravisLight/master/doc/index.png)
+    grunt package
 
-![](https://raw.github.com/willdurand/TravisLight/master/doc/repos.png)
+It's an alias for the `compile:js` and `compile:css` tasks.
 
 
 License
