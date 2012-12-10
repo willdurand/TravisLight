@@ -101,6 +101,7 @@ a:hover, a:focus {
 .loading {
     min-height: 300px;
     background: url(../images/loader.gif) no-repeat center center;
+    background-size: 32px 32px;
 }
 
 .messages .alert:first-child {
