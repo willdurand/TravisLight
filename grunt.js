@@ -18,14 +18,14 @@ module.exports = function(grunt) {
                     name: "main",
                     baseUrl: "js/",
                     mainConfigFile: "js/main.js",
-                    out: "js/compiled.js"
+                    out: "dist/compiled.js"
                 }
             }
         },
         mincss: {
             compress: {
                 files: {
-                    'css/compiled.css': [
+                    'dist/compiled.css': [
                         'components/bootstrap.css/css/bootstrap.min.css',
                         'components/bootstrap.css/css/bootstrap-responsive.min.css',
                         'css/application.css'

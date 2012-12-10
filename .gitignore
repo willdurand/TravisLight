@@ -1,4 +1,3 @@
 components/
 node_modules/
-js/compiled.js
-css/compiled.css
+dist/
