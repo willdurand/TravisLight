@@ -100,8 +100,8 @@ a:hover, a:focus {
     background: url(../images/loader.gif) no-repeat center center;
 }
 
-.messages {
-    margin-top: 20px;
+.messages .alert:first-child {
+    margin-top: 35px;
 }
 
 @media
