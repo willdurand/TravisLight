@@ -52,7 +52,13 @@ a:hover, a:focus {
 
 .actions {
     float: right;
-    margin-top: -34px;
+    margin-top: -31px;
+    font-size: 24px;
+}
+
+.actions a:hover,
+.actions a:focus {
+    text-decoration: none;
 }
 
 .failing {
@@ -88,13 +94,6 @@ a:hover, a:focus {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
 }
 
-.icon-github {
-    width: 24px;
-    height: 24px;
-    display: inline-block;
-    background: transparent url(../images/github.png) 0 0 no-repeat;
-}
-
 .index {
     padding: 0 20px 0 20px;
 }
@@ -106,16 +105,4 @@ a:hover, a:focus {
 
 .messages .alert:first-child {
     margin-top: 35px;
-}
-
-@media
-only screen and (-webkit-min-device-pixel-ratio: 1.5),
-only screen and (-o-min-device-pixel-ratio: 3/2),
-only screen and (min--moz-device-pixel-ratio: 1.5),
-only screen and (min-device-pixel-ratio: 1.5) {
-
-    .icon-github {
-        background-size: 24px 24px;
-        background-image: url(../images/github@2x.png);
-    }
 }
