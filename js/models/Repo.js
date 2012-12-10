@@ -27,7 +27,7 @@ define(
             },
 
             getStatus: function () {
-                var lastBuildStatus = this.get('last_build_status');
+                var lastBuildStatus = this.get('last_build_result');
 
                 if (0 === lastBuildStatus) {
                     return 'passing';
