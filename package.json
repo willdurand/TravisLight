@@ -2,11 +2,13 @@
     "name": "TravisLight",
     "version": "0.0.1",
     "dependencies": {
+        "connect": "2.7",
         "bower": "0.6",
         "grunt": "0.3",
         "grunt-contrib-mincss": "0.3",
         "grunt-contrib-requirejs": "0.3",
-        "connect": "2.7"
+        "grunt-image-embed": "0.1",
+        "grunt-cleanx": "0.5"
     },
     "scripts": {
         "start": "node server.js"
