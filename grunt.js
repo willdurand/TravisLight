@@ -18,11 +18,25 @@ module.exports = function(grunt) {
                     name: "main",
                     baseUrl: "js/",
                     mainConfigFile: "js/main.js",
-                    out: "js/main-built.js"
+                    out: "js/compiled.js"
+                }
+            }
+        },
+        mincss: {
+            compress: {
+                files: {
+                    'css/compiled.css': [
+                        'components/bootstrap.css/css/bootstrap.min.css',
+                        'components/bootstrap.css/css/bootstrap-responsive.min.css',
+                        'css/application.css'
+                    ]
                 }
             }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-requirejs');
+    grunt.loadNpmTasks('grunt-contrib-mincss');
+
+    grunt.registerTask('package', 'requirejs mincss');
 };
