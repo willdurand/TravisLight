@@ -1,9 +1,10 @@
 TravisLight
 ===========
 
-TravisLight is a build monitoring tool that allows you to quickly detect
-failing projects hosted on [GitHub](http://github.com) and tested using
-[Travis CI](https://travis-ci.org/) by providing a nice web interface.
+TravisLight is a build monitoring tool, also known as buildwall, that
+allows you to quickly detect failing projects hosted on
+[GitHub](http://github.com) and tested using [Travis CI](https://travis-ci.org/)
+by providing a nice web interface.
 
 This application has been written using [Backbone.js](http://backbonejs.org/),
 [RequireJS](http://requirejs.org/), [Moment.js](http://momentjs.com/), and
