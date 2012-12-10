@@ -1,0 +1,14 @@
+{
+    "name": "TravisLight",
+    "version": "0.0.1",
+    "dependencies": {
+        "bower": "0.6",
+        "grunt": "0.3",
+        "grunt-contrib-mincss": "0.3",
+        "grunt-contrib-requirejs": "0.3",
+        "connect": "2.7"
+    },
+    "scripts": {
+        "start": "node server.js"
+    }
+}

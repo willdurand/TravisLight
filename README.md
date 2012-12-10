@@ -13,24 +13,24 @@ This application has been written using [Backbone.js](http://backbonejs.org/),
 Installation
 ------------
 
-Install dependencies using [Bower](http://twitter.github.com/bower/):
+Install dependencies using [npm](https://npmjs.org/):
 
+    npm install
+
+Use [Bower](http://twitter.github.com/bower/) to install browser dependencies:
+
+    export PATH=$PATH:`npm bin`
     bower install
 
-You're done! All you need is a webserver to run the application.
+You're done!
 
-You can use the PHP built-in webserver:
+All you need is a webserver to run the application:
+
+    npm start
+
+Alternatively, you can use the PHP built-in webserver:
 
     php -S localhost:8000
-
-Alternatively, you can use [Node.js](http://nodejs.org/). First, install
-[Connect](http://www.senchalabs.org/connect/):
-
-    npm install connect
-
-Now, start the webserver:
-
-    node server.js
 
 Browse the application at: http://locahost:8000/.
 
