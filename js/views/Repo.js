@@ -41,7 +41,7 @@ define(
 
                     window.setTimeout(function () {
                         that.autoFetch();
-                    }, 5000);
+                    }, 30000);
                 });
             }
         });
