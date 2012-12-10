@@ -18,7 +18,7 @@ define(
             },
 
             initialize: function (options) {
-                this.router = options.router;
+                this.ventilator = options.ventilator;
             },
 
             render: function () {
@@ -29,7 +29,7 @@ define(
             watch: function (e) {
                 e.preventDefault();
 
-                this.router.navigate('/' + this.$('#username').val(), { trigger: true });
+                this.ventilator.trigger('navigate:watch', this.$('#username').val());
             }
         });
     }

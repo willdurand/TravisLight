@@ -16,6 +16,7 @@ define(
 
             initialize: function (options) {
                 this.repoCollection = options.repoCollection;
+                this.ventilator = options.ventilator;
             },
 
             render: function () {
@@ -37,6 +38,17 @@ define(
 
                 this.repoCollection.fetch().done(function () {
                     $('body').removeClass('loading');
+
+                    if (0 === that.repoCollection.length) {
+                        that.ventilator.trigger('navigate:index');
+                        that.ventilator.trigger(
+                            'canvas:message:error',
+                            "Can't find any repositories for the given user, sorry."
+                        );
+
+                        return;
+                    }
+
                     that.render();
 
                     window.setTimeout(function () {
