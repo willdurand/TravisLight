@@ -63,7 +63,7 @@ a:hover, a:focus {
     text-decoration: none;
 }
 
-.failing {
+.failed {
     background: #ff3019; /* Old browsers */
     background: -moz-linear-gradient(top, #ff3019 0%, #cf0404 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff3019), color-stop(100%,#cf0404)); /* Chrome,Safari4+ */
@@ -74,7 +74,7 @@ a:hover, a:focus {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=0 ); /* IE6-9 */
 }
 
-.passing {
+.passed {
     background: #25cc00; /* Old browsers */
     background: -moz-linear-gradient(top, #25cc00 0%, #25a01e 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#25cc00), color-stop(100%,#25a01e)); /* Chrome,Safari4+ */

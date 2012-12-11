@@ -33,9 +33,9 @@ define(
                 }
 
                 if (0 === this.get('last_build_result')) {
-                    return 'passing';
+                    return 'passed';
                 } else if (1 === this.get('last_build_result')) {
-                    return 'failing';
+                    return 'failed';
                 }
 
                 return 'unknown';
