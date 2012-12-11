@@ -26,7 +26,7 @@ module.exports = function(grunt) {
             compress: {
                 files: {
                     'dist/compiled.css': [
-                        'dist/bootstrap-embed.css',
+                        'css/bootstrap.min.css',
                         'dist/application-embed.css'
                     ]
                 }
@@ -37,21 +37,12 @@ module.exports = function(grunt) {
                 src: 'css/application.css',
                 dest: 'dist/application-embed.css',
                 deleteAfterEncoding : false
-            },
-            bootstrap: {
-                src: [
-                    'components/bootstrap.css/css/bootstrap.min.css',
-                    'components/bootstrap.css/css/bootstrap-responsive.min.css'
-                ],
-                dest: 'dist/bootstrap-embed.css',
-                deleteAfterEncoding : false
             }
         },
         clean: {
             css: {
                 files: [
-                    'dist/application-embed.css',
-                    'dist/bootstrap-embed.css'
+                    'dist/application-embed.css'
                 ]
             }
         }
