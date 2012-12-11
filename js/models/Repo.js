@@ -27,11 +27,14 @@ define(
             },
 
             getStatus: function () {
-                var lastBuildStatus = this.get('last_build_result');
+                if (null !== this.getLastBuildStartedAt() &&
+                    null === this.getLastBuildFinishedAt()) {
+                    return 'building';
+                }
 
-                if (0 === lastBuildStatus) {
+                if (0 === this.get('last_build_result')) {
                     return 'passing';
-                } else if (1 === lastBuildStatus) {
+                } else if (1 === this.get('last_build_result')) {
                     return 'failing';
                 }
 
@@ -44,6 +47,10 @@ define(
 
             getGithubUrl: function () {
                 return 'https://github.com/' + this.get('slug');
+            },
+
+            getLastBuildStartedAt: function () {
+                return this.get('last_build_started_at');
             },
 
             getLastBuildFinishedAt: function () {

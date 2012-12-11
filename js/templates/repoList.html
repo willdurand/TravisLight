@@ -3,9 +3,13 @@
     <div class="infos">
         <a href="<%-item.travisUrl %>" class="repo-name"><%- item.slug %></a>
         <div class="summary">
+            <% if ('building' !== item.status) { %>
             <time datetime="<%- item.lastBuildFinishedAt %>">
                 <i class="icon-time"></i> <%- item.humanizedLastBuildFinishedAt %>
             </time>
+            <% } else { %>
+            <i class="icon-refresh"></i> Building...
+            <% } %>
         </div>
     </div>
     <div class="actions">

@@ -16,11 +16,12 @@ h1 {
 }
 
 .repo {
+    height: 42px;
     padding: 10px 13px 10px 16px;
 }
 
 .infos {
-    width: 90%;
+    float: left;
 }
 
 .repo-name,
@@ -52,7 +53,7 @@ a:hover, a:focus {
 
 .actions {
     float: right;
-    margin-top: -31px;
+    margin-top: 10px;
     font-size: 24px;
 }
 
@@ -92,6 +93,17 @@ a:hover, a:focus {
     background: -ms-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* IE10+ */
     background: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+}
+
+.building {
+    background: #ffff00; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffff00 0%, #f1da36 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffff00), color-stop(100%,#f1da36)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffff00 0%,#f1da36 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffff00 0%,#f1da36 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ffff00 0%,#f1da36 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #ffff00 0%,#f1da36 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff00', endColorstr='#f1da36',GradientType=0 ); /* IE6-9 */
 }
 
 .index {

@@ -25,13 +25,16 @@ define(
             comparator: function (repoModel) {
                 switch (repoModel.getStatus()) {
                     case 'passing':
-                        return 3;
+                        return 4;
 
                     case 'failing':
+                        return 2;
+
+                    case 'building':
                         return 1;
 
                     default:
-                        return 2;
+                        return 3;
                 }
             }
         });
