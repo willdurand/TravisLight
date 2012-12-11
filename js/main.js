@@ -1,13 +1,21 @@
 require({
+    deps: [
+        'bootstrap'
+    ],
+
     paths: {
         'backbone': '../components/backbone/backbone-min',
         'jquery': '../components/jquery/jquery',
         'underscore': '../components/lodash/lodash.min',
         'text': '../components/requirejs-text/text',
-        'moment': '../components/moment/moment'
+        'moment': '../components/moment/moment',
+        'bootstrap': 'libs/bootstrap.min'
     },
 
     shim: {
+        'bootstrap': {
+            'deps': [ 'jquery' ]
+        },
         'backbone': {
             'deps': [ 'underscore', 'jquery' ],
             'exports': 'Backbone'

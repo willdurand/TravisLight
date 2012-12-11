@@ -4,7 +4,9 @@ module.exports = function(grunt) {
 
     var jsFiles = [
         'js/*.js',
-        'js/**/*.js'
+        'js/collections/*.js',
+        'js/models/*.js',
+        'js/views/*.js'
     ];
 
     // Project configuration.
