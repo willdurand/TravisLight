@@ -26,7 +26,7 @@ Features
 
 #### Fullscreen Mode
 
-Type `f` to enter full screen mode if your browser supports this feature.
+Hit `f` to enter full screen mode if your browser supports this feature.
 
 
 Installation
