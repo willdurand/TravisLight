@@ -3,11 +3,13 @@ define(
         'backbone',
         'jquery',
         'ventilator',
+        'key',
+        'screenfull',
         'views/Repo',
         'collections/Repo',
         'views/Index'
     ],
-    function (Backbone, $, ventilator, RepoView, RepoCollection, IndexView) {
+    function (Backbone, $, ventilator, key, screenfull, RepoView, RepoCollection, IndexView) {
         "use strict";
 
         return new (Backbone.Router.extend({
@@ -18,6 +20,12 @@ define(
             },
 
             initialize: function () {
+                key('f', function () {
+                    if (screenfull.enabled) {
+                        screenfull.request();
+                    }
+                });
+
                 ventilator.on('navigate:index', function () {
                     this.navigate('', { trigger: true });
                 }, this);

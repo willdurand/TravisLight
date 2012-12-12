@@ -9,7 +9,9 @@ require({
         'underscore': '../components/lodash/lodash.min',
         'text': '../components/requirejs-text/text',
         'moment': '../components/moment/moment',
-        'bootstrap': 'libs/bootstrap.min'
+        'bootstrap': 'libs/bootstrap.min',
+        'key': '../components/keymaster/keymaster.min',
+        'screenfull': '../components/screenfull/dist/screenfull.min'
     },
 
     shim: {
@@ -19,6 +21,12 @@ require({
         'backbone': {
             'deps': [ 'underscore', 'jquery' ],
             'exports': 'Backbone'
+        },
+        'key': {
+            'exports': 'key'
+        },
+        'screenfull': {
+            'exports': 'screenfull'
         }
     }
 });

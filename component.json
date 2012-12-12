@@ -7,6 +7,8 @@
     "requirejs": "2.1.*",
     "requirejs-text": "2.0.*",
     "moment": "1.7.*",
-    "font-awesome": "2.0.*"
+    "font-awesome": "2.0.*",
+    "keymaster": "latest",
+    "screenfull": "~1.0.3"
   }
 }

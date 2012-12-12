@@ -21,6 +21,14 @@ A picture is worth a thousand words, so here are a few screenshots:
 ![](https://raw.github.com/willdurand/TravisLight/master/doc/repos.png)
 
 
+Features
+--------
+
+#### Fullscreen Mode
+
+Type `f` to enter full screen mode if your browser supports this feature.
+
+
 Installation
 ------------
 
