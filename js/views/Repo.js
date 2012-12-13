@@ -4,9 +4,10 @@ define(
         'text!templates/repoList.html',
         'underscore',
         'jquery',
-        'backbone'
+        'backbone',
+        'config'
     ],
-    function (template, _, $, Backbone) {
+    function (template, _, $, Backbone, config) {
         "use strict";
 
         return Backbone.View.extend({
@@ -53,7 +54,7 @@ define(
 
                     window.setTimeout(function () {
                         that.autoFetch();
-                    }, 30000);
+                    }, config.refreshTime);
                 });
             }
         });
