@@ -29,7 +29,7 @@ define(
             },
 
             autoFetch: function () {
-                var that = this;
+                var repoView = this;
 
                 if (false === $(this.el).is(':visible')) {
                     $('body').removeClass('loading');
@@ -40,9 +40,9 @@ define(
                 this.repoCollection.fetch().done(function () {
                     $('body').removeClass('loading');
 
-                    if (0 === that.repoCollection.length) {
-                        that.ventilator.trigger('navigate:index');
-                        that.ventilator.trigger(
+                    if (0 === repoView.repoCollection.length) {
+                        repoView.ventilator.trigger('navigate:index');
+                        repoView.ventilator.trigger(
                             'canvas:message:error',
                             "Can't find any repositories for the given user, sorry."
                         );
@@ -50,10 +50,10 @@ define(
                         return;
                     }
 
-                    that.render();
+                    repoView.render();
 
                     window.setTimeout(function () {
-                        that.autoFetch();
+                        repoView.autoFetch();
                     }, config.refreshTime);
                 });
             }
