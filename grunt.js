@@ -47,6 +47,9 @@ module.exports = function(grunt) {
                     'dist/application-embed.css'
                 ]
             }
+        },
+        mocha: {
+            index: [ 'test/index.html' ]
         }
     });
 
@@ -54,6 +57,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-mincss');
     grunt.loadNpmTasks('grunt-image-embed');
     grunt.loadNpmTasks('grunt-cleanx');
+    grunt.loadNpmTasks('grunt-mocha');
 
     grunt.registerTask('package', 'compile:js compile:css');
     grunt.registerTask('compile:js', 'requirejs');
