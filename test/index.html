@@ -1,11 +1,8 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>TravisLight Tests</title>
+        <title>TravisLight Test Suite</title>
         <link rel="stylesheet" href="../node_modules/mocha/mocha.css" />
-        <style>
-            .toast-message, #main { display: none }
-        </style>
     </head>
     <body>
         <div id="mocha"></div>
@@ -18,7 +15,8 @@
             require(
                 [
                     '../test/router.test',
-                    '../test/config.test'
+                    '../test/config.test',
+                    '../test/models/Repo.test'
                 ],
                 function () {
                     mocha.run();

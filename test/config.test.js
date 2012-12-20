@@ -10,7 +10,7 @@ define(
                 expect(config).to.be.an('object');
             });
 
-            it ('should contain a refresh time', function () {
+            it('should contain a refresh time', function () {
                 expect(config.refreshTime).to.exist;
             });
         });
