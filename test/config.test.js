@@ -11,7 +11,7 @@ define(
             });
 
             it('should contain a refresh time', function () {
-                expect(config.refreshTime).to.exist;
+                expect(config.refreshTime).to.equal(15000);
             });
         });
     }

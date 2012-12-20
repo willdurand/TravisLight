@@ -50,7 +50,7 @@ module.exports = function(grunt) {
             }
         },
         mocha: {
-            index: [ 'test/index.html' ]
+            all: [ 'test/index.html' ]
         }
     });
 
