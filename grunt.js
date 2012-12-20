@@ -63,4 +63,5 @@ module.exports = function(grunt) {
     grunt.registerTask('package', 'compile:js compile:css');
     grunt.registerTask('compile:js', 'requirejs');
     grunt.registerTask('compile:css', 'imageEmbed mincss clean:css');
+    grunt.registerTask('test', 'lint mocha');
 };
