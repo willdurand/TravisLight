@@ -1,4 +1,5 @@
-var assert = chai.assert;
+var assert = chai.assert,
+    expect = chai.expect;
 
 mocha.setup({
     ui: 'bdd'
