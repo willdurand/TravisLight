@@ -1,6 +1,9 @@
 TravisLight
 ===========
 
+[![Build
+Status](https://travis-ci.org/willdurand/TravisLight.png?branch=master)](https://travis-ci.org/willdurand/TravisLight)
+
 TravisLight is a build monitoring tool, also known as buildwall, that
 allows you to quickly detect failing projects hosted on
 [GitHub](http://github.com) and tested using [Travis CI](https://travis-ci.org/)
@@ -52,6 +55,15 @@ Alternatively, you can use the PHP built-in webserver:
     php -S localhost:8000
 
 Browse the application at: http://locahost:8000/.
+
+
+Running the test suite
+----------------------
+
+You can run the test suite either by opening the file `test/index.html` in
+your favorite browser, or install [PhantomJS](http://phantomjs.org/) and run:
+
+    grunt test
 
 
 Command Line
