@@ -44,23 +44,27 @@ define(
 
             describe('getStatus()', function (){
                 it('should return "unknown" by default', function () {
-                    expect(repo.getStatus()).to.equal('unknown');
+                    expect(repo.getStatus()).to.equal(repo.STATUS_UNKNOWN);
+                    expect(repo.isFailed()).to.be.equal(false);
                 });
 
                 it('should return "passed" with last_build_result = 0', function () {
                     repo.set('last_build_result', 0);
-                    expect(repo.getStatus()).to.equal('passed');
+                    expect(repo.getStatus()).to.equal(repo.STATUS_PASSED);
+                    expect(repo.isFailed()).to.be.equal(false);
                 });
 
                 it('should return "failed" with last_build_result = 1', function () {
                     repo.set('last_build_result', 1);
-                    expect(repo.getStatus()).to.equal('failed');
+                    expect(repo.getStatus()).to.equal(repo.STATUS_FAILED);
+                    expect(repo.isFailed()).to.be.equal(true);
                 });
 
                 it('should return "building" with a last build startedAt date and no last build finishedAt date', function () {
                     repo.set('last_build_started_at', new Date());
                     repo.set('last_build_finished_at', null);
-                    expect(repo.getStatus()).to.equal('building');
+                    expect(repo.getStatus()).to.equal(repo.STATUS_BUILDING);
+                    expect(repo.isFailed()).to.be.equal(false);
                 });
             });
         });

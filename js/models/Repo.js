@@ -10,6 +10,11 @@ define(
 
         return Backbone.Model.extend({
 
+            STATUS_PASSED: 'passed',
+            STATUS_FAILED: 'failed',
+            STATUS_BUILDING: 'building',
+            STATUS_UNKNOWN: 'unknown',
+
             url : function() {
                 var base = $('body').data('api-url') + '/repos';
 
@@ -29,16 +34,16 @@ define(
             getStatus: function () {
                 if (null !== this.getLastBuildStartedAt() &&
                     null === this.getLastBuildFinishedAt()) {
-                    return 'building';
+                    return this.STATUS_BUILDING;
                 }
 
                 if (0 === this.get('last_build_result')) {
-                    return 'passed';
+                    return this.STATUS_PASSED;
                 } else if (1 === this.get('last_build_result')) {
-                    return 'failed';
+                    return this.STATUS_FAILED;
                 }
 
-                return 'unknown';
+                return this.STATUS_UNKNOWN;
             },
 
             getTravisUrl: function () {
@@ -66,7 +71,7 @@ define(
             },
 
             isFailed: function () {
-                return 'failed' === this.getStatus();
+                return this.STATUS_FAILED === this.getStatus();
             }
         });
     }

@@ -24,13 +24,13 @@ define(
 
             comparator: function (repoModel) {
                 switch (repoModel.getStatus()) {
-                    case 'passed':
+                    case repoModel.STATUS_PASSED:
                         return 4;
 
-                    case 'failed':
+                    case repoModel.STATUS_FAILED:
                         return 2;
 
-                    case 'building':
+                    case repoModel.STATUS_BUILDING:
                         return 1;
 
                     default:
