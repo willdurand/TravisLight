@@ -50,10 +50,6 @@ All you need is a webserver to run the application:
 
     npm start
 
-Alternatively, you can use the PHP built-in webserver:
-
-    php -S localhost:8000
-
 Browse the application at: http://locahost:8000/.
 
 
