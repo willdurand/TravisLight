@@ -36,6 +36,12 @@ define(
                     default:
                         return 3;
                 }
+            },
+
+            getNbFailed: function () {
+                return this.filter(function (repoModel) {
+                    return repoModel.isFailed();
+                }).length;
             }
         });
     }

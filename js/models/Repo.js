@@ -63,6 +63,10 @@ define(
                 }
 
                 return '';
+            },
+
+            isFailed: function () {
+                return 'failed' === this.getStatus();
             }
         });
     }

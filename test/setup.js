@@ -16,7 +16,8 @@ require.config({
         'moment': '../components/moment/moment',
         'bootstrap': 'libs/bootstrap.min',
         'key': '../components/keymaster/keymaster.min',
-        'screenfull': '../components/screenfull/dist/screenfull.min'
+        'screenfull': '../components/screenfull/dist/screenfull.min',
+        'tinycon': '../components/tinycon/tinycon.min'
     },
 
     shim: {
@@ -32,6 +33,9 @@ require.config({
         },
         'screenfull': {
             'exports': 'screenfull'
+        },
+        'tinycon': {
+            'exports': 'Tinycon'
         }
     }
 });

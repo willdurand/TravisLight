@@ -5,9 +5,10 @@ define(
         'underscore',
         'jquery',
         'backbone',
-        'config'
+        'config',
+        'tinycon'
     ],
-    function (template, _, $, Backbone, config) {
+    function (template, _, $, Backbone, config, Tinycon) {
         "use strict";
 
         return Backbone.View.extend({
@@ -51,11 +52,18 @@ define(
                     }
 
                     repoView.render();
+                    repoView.updateFavicon();
 
                     window.setTimeout(function () {
                         repoView.autoFetch();
                     }, config.refreshTime);
                 });
+            },
+
+            updateFavicon: function () {
+                var nbFailed = this.repoCollection.getNbFailed();
+
+                Tinycon.setBubble(nbFailed);
             }
         });
     }

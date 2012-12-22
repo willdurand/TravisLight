@@ -11,7 +11,8 @@ require({
         'moment': '../components/moment/moment',
         'bootstrap': 'libs/bootstrap.min',
         'key': '../components/keymaster/keymaster.min',
-        'screenfull': '../components/screenfull/dist/screenfull.min'
+        'screenfull': '../components/screenfull/dist/screenfull.min',
+        'tinycon': '../components/tinycon/tinycon.min'
     },
 
     shim: {
@@ -27,6 +28,9 @@ require({
         },
         'screenfull': {
             'exports': 'screenfull'
+        },
+        'tinycon': {
+            'exports': 'Tinycon'
         }
     }
 });
@@ -36,10 +40,15 @@ require(
         'router',
         'views/canvas',
         'jquery',
-        'backbone'
+        'backbone',
+        'tinycon'
     ],
-    function (router, canvasView, $, Backbone) {
+    function (router, canvasView, $, Backbone, Tinycon) {
         "use strict";
+
+        Tinycon.setOptions({
+            background: '#ff3019'
+        });
 
         canvasView.render();
         $('body').prepend(canvasView.el);

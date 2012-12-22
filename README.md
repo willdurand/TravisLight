@@ -31,6 +31,15 @@ Features
 
 Hit `f` to enter full screen mode if your browser supports this feature.
 
+Powered by [screenfull](https://github.com/sindresorhus/screenfull.js).
+
+
+#### Favicon notification
+
+![](https://raw.github.com/willdurand/TravisLight/master/doc/favicon.png)
+
+Powered by [tinycon](https://github.com/tommoor/tinycon).
+
 
 Installation
 ------------

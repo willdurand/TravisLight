@@ -9,6 +9,7 @@
     "moment": "1.7.*",
     "font-awesome": "2.0.*",
     "keymaster": "latest",
-    "screenfull": "~1.0.3"
+    "screenfull": "~1.0.3",
+    "tinycon": "latest"
   }
 }
