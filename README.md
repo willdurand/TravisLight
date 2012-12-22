@@ -36,6 +36,8 @@ Powered by [screenfull](https://github.com/sindresorhus/screenfull.js).
 
 #### Favicon notification
 
+TravisLight shows the number of failed projects in its favicon if possible:
+
 ![](https://raw.github.com/willdurand/TravisLight/master/doc/favicon.png)
 
 Powered by [tinycon](https://github.com/tommoor/tinycon).
