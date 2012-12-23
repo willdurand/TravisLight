@@ -44,11 +44,7 @@ module.exports = function(grunt) {
             }
         },
         clean: {
-            css: {
-                files: [
-                    'dist/application-embed.css'
-                ]
-            },
+            css: [ 'dist/application-embed.css' ],
             dist: [ 'dist/' ]
         },
         mocha: {
@@ -76,7 +72,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-requirejs');
     grunt.loadNpmTasks('grunt-contrib-mincss');
     grunt.loadNpmTasks('grunt-image-embed');
-    grunt.loadNpmTasks('grunt-cleanx');
+    grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-mocha');
     grunt.loadNpmTasks('grunt-targethtml');
     grunt.loadNpmTasks('grunt-contrib-copy');
