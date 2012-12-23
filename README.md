@@ -81,8 +81,8 @@ Package the application using the following command:
 
     grunt package
 
-It's an alias for the `compile:js` and `compile:css` tasks.
-
+You will get a `dist/` directory with the packaged application. That's all you
+need to run TravisLight!
 
 License
 -------
