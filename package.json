@@ -2,6 +2,8 @@
   "name": "TravisLight",
   "version": "0.0.1",
   "dependencies": {
+  },
+  "devDependencies": {
     "connect": "2.7",
     "bower": "0.6",
     "grunt": "0.3",
