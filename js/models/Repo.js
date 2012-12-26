@@ -72,6 +72,22 @@ define(
 
             isFailed: function () {
                 return this.STATUS_FAILED === this.getStatus();
+            },
+
+            getRank: function () {
+                switch (this.getStatus()) {
+                    case this.STATUS_PASSED:
+                        return 4;
+
+                    case this.STATUS_FAILED:
+                        return 2;
+
+                    case this.STATUS_BUILDING:
+                        return 1;
+
+                    default:
+                        return 3;
+                }
             }
         });
     }

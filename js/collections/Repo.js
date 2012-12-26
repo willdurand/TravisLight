@@ -23,19 +23,7 @@ define(
             },
 
             comparator: function (repoModel) {
-                switch (repoModel.getStatus()) {
-                    case repoModel.STATUS_PASSED:
-                        return 4;
-
-                    case repoModel.STATUS_FAILED:
-                        return 2;
-
-                    case repoModel.STATUS_BUILDING:
-                        return 1;
-
-                    default:
-                        return 3;
-                }
+                return repoModel.getRank();
             },
 
             getNbFailed: function () {
