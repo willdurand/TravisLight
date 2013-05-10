@@ -1,8 +1,7 @@
 {
   "name": "TravisLight",
   "version": "0.0.1",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "connect": "2.7",
     "bower": "0.9",
@@ -12,12 +11,13 @@
     "grunt-contrib-requirejs": "0.4",
     "grunt-image-embed": "0.3",
     "grunt-cleanx": "0.4",
-    "mocha": "~1.7.4",
+    "mocha": "~1.9",
     "chai": "~1.4.0",
-    "grunt-mocha": "~0.1.7",
+    "grunt-mocha": "0.3",
     "grunt-targethtml": "0.2",
     "grunt-contrib-copy": "~0.4.1",
-    "grunt-contrib-clean": "~0.4.0"
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-contrib-jshint": "0.4"
   },
   "scripts": {
     "start": "node server.js",

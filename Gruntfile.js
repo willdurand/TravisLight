@@ -13,7 +13,8 @@ module.exports = function(grunt) {
 
     // Project configuration.
     grunt.initConfig({
-        lint: {
+        pkg: grunt.file.readJSON('package.json'),
+        jshint: {
             files: jsFiles
         },
         requirejs: {
@@ -48,7 +49,7 @@ module.exports = function(grunt) {
             dist: [ 'dist/' ]
         },
         mocha: {
-            all: [ 'test/index.html' ]
+            all: { src: 'test/index.html', run: false }
         },
         targethtml: {
             dist: {
@@ -76,10 +77,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-mocha');
     grunt.loadNpmTasks('grunt-targethtml');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
 
-    grunt.registerTask('package', 'clean:dist compile:js compile:css compile:html copy:dist');
-    grunt.registerTask('compile:js', 'requirejs');
-    grunt.registerTask('compile:css', 'imageEmbed mincss clean:css');
-    grunt.registerTask('compile:html', 'targethtml:dist');
-    grunt.registerTask('test', 'lint mocha');
+    grunt.registerTask('package', [ 'clean:dist', 'compile:js', 'compile:css', 'compile:html', 'copy:dist' ]);
+    grunt.registerTask('compile:js', [ 'requirejs' ] );
+    grunt.registerTask('compile:css', [ 'imageEmbed', 'mincss', 'clean:css' ]);
+    grunt.registerTask('compile:html', [ 'targethtml:dist' ]);
+    grunt.registerTask('test', [ 'jshint', 'mocha' ]);
 };

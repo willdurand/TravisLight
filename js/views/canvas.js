@@ -4,7 +4,7 @@ define(
         'text!templates/canvas.html',
         'underscore',
         'backbone',
-        'jquery',
+        'jquery'
     ],
     function (template, _, Backbone, $) {
         "use strict";
