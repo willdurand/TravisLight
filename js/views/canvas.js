@@ -5,9 +5,8 @@ define(
         'underscore',
         'backbone',
         'jquery',
-        'ventilator'
     ],
-    function (template, _, Backbone, $, ventilator) {
+    function (template, _, Backbone, $) {
         "use strict";
 
         return new (Backbone.View.extend({
@@ -17,11 +16,11 @@ define(
             messageTemplate: _.template($(template).filter('#message').html()),
 
             initialize: function () {
-                ventilator.on('canvas:message:notice', function (message) {
+                Backbone.on('canvas:message:notice', function (message) {
                     this.addMessage(message, 'info');
                 }, this);
 
-                ventilator.on('canvas:message:error', function (message) {
+                Backbone.on('canvas:message:error', function (message) {
                     this.addMessage(message, 'error');
                 }, this);
             },

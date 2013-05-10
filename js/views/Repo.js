@@ -18,7 +18,6 @@ define(
 
             initialize: function (options) {
                 this.repoCollection = options.repoCollection;
-                this.ventilator = options.ventilator;
             },
 
             render: function () {
@@ -42,8 +41,8 @@ define(
                     $('body').removeClass('loading');
 
                     if (0 === repoView.repoCollection.length) {
-                        repoView.ventilator.trigger('navigate:index');
-                        repoView.ventilator.trigger(
+                        Backbone.trigger('navigate:index');
+                        Backbone.trigger(
                             'canvas:message:error',
                             "Can't find any repositories for the given user, sorry."
                         );

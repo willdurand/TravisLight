@@ -2,14 +2,13 @@ define(
     [
         'backbone',
         'jquery',
-        'ventilator',
         'key',
         'screenfull',
         'views/Repo',
         'collections/Repo',
         'views/Index'
     ],
-    function (Backbone, $, ventilator, key, screenfull, RepoView, RepoCollection, IndexView) {
+    function (Backbone, $, key, screenfull, RepoView, RepoCollection, IndexView) {
         "use strict";
 
         return new (Backbone.Router.extend({
@@ -26,19 +25,17 @@ define(
                     }
                 });
 
-                ventilator.on('navigate:index', function () {
+                Backbone.on('navigate:index', function () {
                     this.navigate('', { trigger: true });
                 }, this);
 
-                ventilator.on('navigate:watch', function (username) {
+                Backbone.on('navigate:watch', function (username) {
                     this.navigate('/' + username, { trigger: true });
                 }, this);
             },
 
             index: function () {
-                var indexView = new IndexView({
-                    ventilator: ventilator
-                });
+                var indexView = new IndexView();
 
                 indexView.render();
                 $('.main').html(indexView.el);
@@ -52,7 +49,6 @@ define(
                     username: username
                 });
                 repoView = new RepoView({
-                    ventilator: ventilator,
                     repoCollection: repoCollection
                 });
 

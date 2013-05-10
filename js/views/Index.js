@@ -17,10 +17,6 @@ define(
                 'click #watch': 'watch'
             },
 
-            initialize: function (options) {
-                this.ventilator = options.ventilator;
-            },
-
             render: function () {
                 $('body').removeClass('loading');
                 this.$el.html(this.template());
@@ -29,7 +25,7 @@ define(
             watch: function (e) {
                 e.preventDefault();
 
-                this.ventilator.trigger('navigate:watch', this.$('#username').val());
+                Backbone.trigger('navigate:watch', this.$('#username').val());
             }
         });
     }
