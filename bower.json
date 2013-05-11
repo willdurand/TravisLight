@@ -7,7 +7,7 @@
     "requirejs": "2.1.*",
     "requirejs-text": "2.0.*",
     "moment": "1.7.*",
-    "font-awesome": "2.0.*",
+    "font-awesome": "~3.1",
     "keymaster": "latest",
     "screenfull": "~1.0",
     "tinycon": "latest"

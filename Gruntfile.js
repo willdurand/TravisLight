@@ -61,9 +61,13 @@ module.exports = function(grunt) {
             dist: {
                 files: {
                     'dist/js/require.js': 'components/requirejs/require.js',
-                    'dist/font-awesome/css/': 'components/font-awesome/css/*.css',
-                    'dist/font-awesome/font/': 'components/font-awesome/font/*',
-                    'dist/font-awesome/FontAwesome.ttf': 'components/font-awesome/FontAwesome.ttf',
+                    'dist/font-awesome/css/font-awesome.min.css': 'components/font-awesome/build/assets/font-awesome/css/font-awesome.min.css',
+                    'dist/font-awesome/css/font-awesome-ie7.min.css': 'components/font-awesome/build/assets/font-awesome/css/font-awesome-ie7.min.css',
+                    'dist/font-awesome/font/FontAwesome.otf': 'components/font-awesome/build/assets/font-awesome/font/FontAwesome.otf',
+                    'dist/font-awesome/font/fontawesome-webfont.eot': 'components/font-awesome/build/assets/font-awesome/font/fontawesome-webfont.eot',
+                    'dist/font-awesome/font/fontawesome-webfont.svg': 'components/font-awesome/build/assets/font-awesome/font/fontawesome-webfont.svg',
+                    'dist/font-awesome/font/fontawesome-webfont.ttf': 'components/font-awesome/build/assets/font-awesome/font/fontawesome-webfont.ttf',
+                    'dist/font-awesome/font/fontawesome-webfont.woff': 'components/font-awesome/build/assets/font-awesome/font/fontawesome-webfont.woff',
                     'dist/favicon.ico': 'favicon.ico'
                 }
             }
