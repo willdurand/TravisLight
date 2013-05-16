@@ -1,3 +1,5 @@
 components/
 node_modules/
 dist/
+.sass-cache/
+css/application.css

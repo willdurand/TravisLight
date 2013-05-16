@@ -1,0 +1,37 @@
+.repo-list {
+    margin-bottom: 0;
+}
+
+.repo {
+    height: 42px;
+    padding: 10px 13px 10px 16px;
+}
+
+.repo-name,
+.repo-summary {
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+}
+
+.repo-name {
+    margin: 0;
+    font-weight: bold;
+}
+
+.repo-metadata {
+    float: left;
+    width: 90%;
+}
+
+.repo-actions {
+    float: right;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.repo-actions a:hover,
+.repo-actions a:focus {
+    text-decoration: none;
+}

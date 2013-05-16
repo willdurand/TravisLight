@@ -1,0 +1,51 @@
+// base
+body {
+    padding: 0;
+    background-color: #fff;
+}
+
+h1 {
+    text-shadow: 2px 2px 5px black;
+    margin-bottom: 9px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 1;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: #000;
+    text-decoration: underline;
+}
+
+// layout
+@import "_layout";
+
+#messages .alert:first-child {
+    margin-top: 35px;
+}
+
+// modules
+@import "_m-repo";
+
+.index {
+    padding: 0 20px 0 20px;
+}
+
+.index a {
+    color: #999;
+}
+
+// states
+@import "_s-repo";
+
+.loading {
+    min-height: 300px;
+    background: url(../images/loader.gif) no-repeat center center;
+    background-size: 32px 32px;
+}

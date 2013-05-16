@@ -27,6 +27,15 @@ module.exports = function(grunt) {
                 }
             }
         },
+        compass: {
+            compile: {
+                options: {
+                    sassDir: 'sass',
+                    cssDir: 'css',
+                    environment: 'production'
+                }
+            }
+        },
         mincss: {
             compress: {
                 files: {
@@ -45,7 +54,7 @@ module.exports = function(grunt) {
             }
         },
         clean: {
-            css: [ 'dist/application-embed.css' ],
+            css: [ 'css/application.css', 'dist/application-embed.css' ],
             dist: [ 'dist/' ]
         },
         mocha: {
@@ -82,10 +91,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-targethtml');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-compass');
 
     grunt.registerTask('package', [ 'clean:dist', 'compile:js', 'compile:css', 'compile:html', 'copy:dist' ]);
     grunt.registerTask('compile:js', [ 'requirejs' ] );
-    grunt.registerTask('compile:css', [ 'imageEmbed', 'mincss', 'clean:css' ]);
+    grunt.registerTask('compile:css', [ 'compass:compile', 'imageEmbed', 'mincss', 'clean:css' ]);
     grunt.registerTask('compile:html', [ 'targethtml:dist' ]);
     grunt.registerTask('test', [ 'jshint', 'mocha' ]);
 };

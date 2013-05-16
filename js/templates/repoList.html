@@ -1,8 +1,8 @@
 <% _.each(collection, function (item) { %>
-<li class="repo <%- item.status %>">
-    <div class="infos">
+<li class="repo is-<%- item.status %>">
+    <div class="repo-metadata">
         <a href="<%-item.travisUrl %>" class="repo-name"><%- item.slug %></a>
-        <div class="summary">
+        <div class="repo-summary">
             <% if ('building' !== item.status) { %>
             <time datetime="<%- item.lastBuildFinishedAt %>">
                 <i class="icon-time"></i> <%- item.humanizedLastBuildFinishedAt %>
@@ -12,7 +12,7 @@
             <% } %>
         </div>
     </div>
-    <div class="actions">
+    <div class="repo-actions">
         <a href="<%- item.githubUrl %>" target="_blank">
             <i class="icon-github"></i>
         </a>
