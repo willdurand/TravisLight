@@ -3,9 +3,10 @@ define(
         'models/Repo',
         'underscore',
         'jquery',
-        'backbone'
+        'backbone',
+        'moment'
     ],
-    function (RepoModel, _, $, Backbone) {
+    function (RepoModel, _, $, Backbone, moment) {
         "use strict";
 
         return Backbone.Collection.extend({
@@ -23,7 +24,7 @@ define(
             },
 
             comparator: function (repoModel) {
-                return repoModel.getRank();
+                return repoModel.getRank() * 100000000000 - moment(repoModel.getLastBuildFinishedAt());
             },
 
             getNbFailed: function () {

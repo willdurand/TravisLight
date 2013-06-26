@@ -18,12 +18,6 @@ define(
             it('should have a presenter() method', function () {
                 expect(repo).to.respondTo('presenter');
             });
-
-            describe('comparator()', function () {
-                it('should return 3 by default', function () {
-                    expect(repo.comparator(new RepoModel())).to.equal(3);
-                });
-            });
         });
     }
 );
