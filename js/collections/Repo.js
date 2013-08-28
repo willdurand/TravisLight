@@ -24,7 +24,15 @@ define(
             },
 
             comparator: function (repoModel) {
-                return repoModel.getRank() * 100000000000 - moment(repoModel.getLastBuildFinishedAt());
+                var result = repoModel.getRank() * 100000000000;
+
+                if (null !== repoModel.getLastBuildFinishedAt()) {
+                    result = result - moment(repoModel.getLastBuildFinishedAt());
+                } else {
+                    result = result - moment(repoModel.getLastBuildStartedAt());
+                }
+
+                return result;
             },
 
             getNbFailed: function () {
