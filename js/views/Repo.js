@@ -18,11 +18,11 @@ define(
 
             initialize: function (options) {
                 this.repoCollection = options.repoCollection;
+
+                $('body').addClass('loading');
             },
 
             render: function () {
-                $('body').addClass('loading');
-
                 this.$el.html(this.template({
                     collection: this.repoCollection.presenter()
                 }));
@@ -36,6 +36,8 @@ define(
 
                     return;
                 }
+
+                $('body').addClass('loading');
 
                 this.repoCollection.fetch().done(function () {
                     $('body').removeClass('loading');
