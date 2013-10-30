@@ -50,7 +50,7 @@ define(
                 repoCollection = new RepoCollection(null, {
                     collections: [
                         new MemberRepoCollection({ username: username }),
-                        new OwnRepoCollection({ username: username }),
+                        new OwnRepoCollection({ username: username })
                     ]
                 });
                 repoView = new RepoView({
