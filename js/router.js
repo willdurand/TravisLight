@@ -47,7 +47,7 @@ define(
                 var repoView,
                     repoCollection;
 
-                repoCollection = new RepoCollection({
+                repoCollection = new RepoCollection(null, {
                     collections: [
                         new MemberRepoCollection({ username: username }),
                         new OwnRepoCollection({ username: username }),

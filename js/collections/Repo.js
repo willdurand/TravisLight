@@ -12,7 +12,7 @@ define(
         return Backbone.Collection.extend({
             model: RepoModel,
 
-            initialize: function (options) {
+            initialize: function (models, options) {
                 this.collections = options.collections;
             },
 
