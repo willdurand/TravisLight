@@ -12,9 +12,19 @@ define(
         return Backbone.Collection.extend({
             model: RepoModel,
 
-            initialize: function (models, options) {
-                this.username = options.username;
-                this.url      = $('body').data('api-url') + '/repos?member=' + this.username;
+            initialize: function (options) {
+                this.collections = options.collections;
+            },
+
+            fetch: function () {
+                var mainCollection = this;
+
+                return $.when
+                    .apply($, _.map(this.collections, function (collection) {
+                        return collection.fetch().done(function () {
+                            mainCollection.add(collection.models);
+                        });
+                    }));
             },
 
             presenter: function () {

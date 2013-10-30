@@ -6,9 +6,11 @@ define(
         'screenfull',
         'views/Repo',
         'collections/Repo',
+        'collections/MemberRepo',
+        'collections/OwnRepo',
         'views/Index'
     ],
-    function (Backbone, $, key, screenfull, RepoView, RepoCollection, IndexView) {
+    function (Backbone, $, key, screenfull, RepoView, RepoCollection, MemberRepoCollection, OwnRepoCollection, IndexView) {
         "use strict";
 
         return new (Backbone.Router.extend({
@@ -45,8 +47,11 @@ define(
                 var repoView,
                     repoCollection;
 
-                repoCollection = new RepoCollection(null, {
-                    username: username
+                repoCollection = new RepoCollection({
+                    collections: [
+                        new MemberRepoCollection({ username: username }),
+                        new OwnRepoCollection({ username: username }),
+                    ]
                 });
                 repoView = new RepoView({
                     repoCollection: repoCollection
