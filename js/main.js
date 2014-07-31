@@ -4,15 +4,15 @@ require({
     ],
 
     paths: {
-        'backbone': '../components/backbone/backbone-min',
-        'jquery': '../components/jquery/jquery',
-        'underscore': '../components/lodash/lodash.min',
-        'text': '../components/requirejs-text/text',
-        'moment': '../components/moment/moment',
+        'backbone': '../bower_components/backbone/backbone-min',
+        'jquery': '../bower_components/jquery/jquery',
+        'underscore': '../bower_components/lodash/lodash.min',
+        'text': '../bower_components/requirejs-text/text',
+        'moment': '../bower_components/moment/moment',
         'bootstrap': 'libs/bootstrap.min',
-        'key': '../components/keymaster/keymaster.min',
-        'screenfull': '../components/screenfull/dist/screenfull.min',
-        'tinycon': '../components/tinycon/tinycon.min'
+        'key': '../bower_components/keymaster/keymaster',
+        'screenfull': '../bower_components/screenfull/dist/screenfull.min',
+        'tinycon': '../bower_components/tinycon/tinycon.min'
     },
 
     shim: {
