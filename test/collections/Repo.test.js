@@ -24,12 +24,12 @@ define(
 
                 repo.add(new RepoModel({
                     id: 'passed',
-                    last_build_result: 0
+                    last_build_state: 'passed'
                 }));
 
                 repo.add(new RepoModel({
                     id: 'failed',
-                    last_build_result: 1
+                    last_build_state: 'failed'
                 }));
 
                 repo.add(new RepoModel({
