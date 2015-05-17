@@ -36,8 +36,8 @@ module.exports = function(grunt) {
                 }
             }
         },
-        mincss: {
-            compress: {
+        cssmin: {
+            target: {
                 files: {
                     'dist/compiled.css': [
                         'css/bootstrap.min.css',
@@ -84,7 +84,7 @@ module.exports = function(grunt) {
     });
 
     grunt.loadNpmTasks('grunt-contrib-requirejs');
-    grunt.loadNpmTasks('grunt-contrib-mincss');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-image-embed');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-mocha');
@@ -95,7 +95,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('package', [ 'clean:dist', 'compile:js', 'compile:css', 'compile:html', 'copy:dist' ]);
     grunt.registerTask('compile:js', [ 'requirejs' ] );
-    grunt.registerTask('compile:css', [ 'compass:compile', 'imageEmbed', 'mincss', 'clean:css' ]);
+    grunt.registerTask('compile:css', [ 'compass:compile', 'imageEmbed', 'cssmin', 'clean:css' ]);
     grunt.registerTask('compile:html', [ 'targethtml:dist' ]);
     grunt.registerTask('test', [ 'jshint', 'mocha' ]);
 };
