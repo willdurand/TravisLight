@@ -70,6 +70,10 @@ define(
                     return this.STATUS_BUILDING;
                 }
 
+                if ('created' === this.get('last_build_state') || 'started' === this.get('last_build_state')) {
+                    return this.STATUS_BUILDING;
+                }
+
                 if ('passed' === this.get('last_build_state')) {
                     return this.STATUS_PASSED;
                 } else if ('errored' === this.get('last_build_state') || 'failed' === this.get('last_build_state')) {
