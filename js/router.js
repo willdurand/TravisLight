@@ -17,9 +17,9 @@ define(
 
             routes: {
                 '': 'index',
-                ':username': 'watch',
+                ':username?github_access_token=:github_access_token': 'watch',
                 ':username?github_access_token=': 'watch',
-                ':username?github_access_token=:github_access_token': 'watch'
+                ':username': 'watch'
             },
 
             initialize: function () {
