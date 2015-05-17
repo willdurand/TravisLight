@@ -15,12 +15,12 @@
     "grunt-contrib-jshint": "0.4",
     "grunt-contrib-requirejs": "0.4",
     "grunt-image-embed": "0.3",
-    "grunt-mocha": "0.4",
+    "grunt-mocha": "^0.4.12",
     "grunt-targethtml": "0.2",
     "mocha": "~1.9"
   },
   "scripts": {
     "start": "node server.js",
-    "test": "./node_modules/grunt-cli/bin/grunt test"
+    "test": "grunt test"
   }
 }
