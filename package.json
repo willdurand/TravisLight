@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "dependencies": {},
   "devDependencies": {
-    "chai": "~1.4.0",
     "connect": "2.7",
     "grunt": "^0.4.5",
     "grunt-cleanx": "0.4",

@@ -11,5 +11,9 @@
     "keymaster": "latest",
     "screenfull": "~1.0",
     "tinycon": "latest"
+  },
+  "devDependencies": {
+    "chai": "~2.3.0",
+    "mocha": "~2.1.0"
   }
 }
