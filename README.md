@@ -52,7 +52,6 @@ Install dependencies using [npm](https://npmjs.org/):
 
 Use [Bower](http://twitter.github.com/bower/) to install browser dependencies:
 
-    export PATH=$PATH:`npm bin`
     bower install
 
 You're done!

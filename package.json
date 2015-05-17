@@ -3,10 +3,9 @@
   "version": "0.0.1",
   "dependencies": {},
   "devDependencies": {
-    "bower": "0.9",
     "chai": "~1.4.0",
     "connect": "2.7",
-    "grunt": "~0.4.5",
+    "grunt": "^0.4.5",
     "grunt-cleanx": "0.4",
     "grunt-contrib-clean": "~0.4.0",
     "grunt-contrib-compass": "~0.2.0",
@@ -16,8 +15,7 @@
     "grunt-contrib-requirejs": "0.4",
     "grunt-image-embed": "0.3",
     "grunt-mocha": "^0.4.12",
-    "grunt-targethtml": "0.2",
-    "mocha": "~1.9"
+    "grunt-targethtml": "0.2"
   },
   "scripts": {
     "start": "node server.js",
