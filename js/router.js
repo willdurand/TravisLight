@@ -17,7 +17,7 @@ define(
 
             routes: {
                 '': 'index',
-                ':username': 'watch'
+                ':username?github_access_token=:github_access_token': 'watch'
             },
 
             initialize: function () {
@@ -31,8 +31,11 @@ define(
                     this.navigate('', { trigger: true });
                 }, this);
 
-                Backbone.on('navigate:watch', function (username) {
-                    this.navigate('/' + username, { trigger: true });
+                Backbone.on('navigate:watch', function (data) {
+                    this.navigate(
+                        '/' + data.username + '?github_access_token=' + data.github_access_token,
+                        { trigger: true }
+                    );
                 }, this);
             },
 
@@ -43,14 +46,19 @@ define(
                 $('.main').html(indexView.el);
             },
 
-            watch: function (username) {
+            watch: function (username, github_access_token) {
                 var repoView,
                     repoCollection;
 
+                var options = {
+                    'username': username,
+                    'github_access_token': github_access_token
+                };
+
                 repoCollection = new RepoCollection(null, {
                     collections: [
-                        new MemberRepoCollection({ username: username }),
-                        new OwnRepoCollection({ username: username })
+                        new MemberRepoCollection(options),
+                        new OwnRepoCollection(options)
                     ]
                 });
                 repoView = new RepoView({

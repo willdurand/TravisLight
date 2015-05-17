@@ -1,21 +1,29 @@
 <% _.each(collection, function (item) { %>
-<li class="repo is-<%- item.status %>">
-    <div class="repo-metadata">
-        <a href="<%-item.travisUrl %>" class="repo-name"><%- item.slug %></a>
-        <div class="repo-summary">
-            <% if ('building' !== item.status) { %>
-            <time datetime="<%- item.lastBuildFinishedAt %>">
-                <i class="icon-time"></i> <%- item.humanizedLastBuildFinishedAt %>
-            </time>
-            <% } else { %>
-            <i class="icon-refresh"></i> Building...
-            <% } %>
-        </div>
-    </div>
-    <div class="repo-actions">
+<tr class="repo is-<%- item.status %>">
+    <td class="repo-name">
+        <a href="<%-item.travisUrl %>"><%- item.slug %></a>
+    </td>
+    <td class="last-build">
+        <% if ('building' !== item.status) { %>
+        <time datetime="<%- item.lastBuildFinishedAt %>">
+            <i class="icon-time"></i> <%- item.humanizedLastBuildFinishedAt %>
+        </time>
+        <% } else { %>
+        <i class="icon-refresh"></i> Building
+        <% } %>
+    </td>
+    <td class="last-release">
+    <% if (item.lastReleaseTagName) { %>
+        <i class="icon-tag"></i> <a href="<%- item.lastReleaseUrl %>" target="_blank"><%- item.lastReleaseTagName %></a> - <%- item.lastReleasePublishedAt %>
+    <% } %>
+    </td>
+    <td class="issues">
+        <i class="icon icon-exclamation-sign"></i> <%- item.nbOpenIssues %> open issues
+    </td>
+    <td class="repo-actions">
         <a href="<%- item.githubUrl %>" target="_blank">
             <i class="icon-github"></i>
         </a>
-    </div>
-</li>
-<% }); %>
+    </td>
+</tr>
+<% }) %>

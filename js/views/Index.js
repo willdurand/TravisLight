@@ -25,7 +25,10 @@ define(
             watch: function (e) {
                 e.preventDefault();
 
-                Backbone.trigger('navigate:watch', this.$('#username').val());
+                Backbone.trigger('navigate:watch', {
+                    'username': this.$('#username').val(),
+                    'github_access_token': this.$('#github_access_token').val()
+                });
             }
         });
     }
